@@ -25,6 +25,12 @@
   --border: 4px;
 }
 
+body {
+  background-color: var(--verylight);
+  height: 100%;
+  font-family: "Nunito Sans", sans-serif;
+}
+/* NAV */
 nav {
   background-color: var(--white);
   box-shadow: 0 2px 15px var(--card-shadow);
@@ -58,12 +64,6 @@ nav button i {
 }
 
 /* SEARCH */
-.content {
-  background-color: var(--verylight);
-  height: 100%;
-  font-family: "Nunito Sans", sans-serif;
-}
-
 .search-items {
   background-color: var(--white);
   box-shadow: 0 2px 15px var(--card-shadow);
@@ -94,6 +94,7 @@ nav button i {
 .select {
   margin: 0 auto;
   margin-top: 40px;
+  margin-bottom: 30px;
   width: 90%;
 }
 .content-select select {
@@ -125,7 +126,7 @@ nav button i {
   padding: 7px 10px;
   position: relative;
   transition: all 0.25s ease;
-  width: 100%;
+  width: 60%;
 }
 
 .content-select i {
@@ -208,7 +209,7 @@ option:hover {
 /* DESKTOP */
 
 @media (min-width: 1200px) {
-  .content{
+  .content {
     height: 100vh;
   }
   nav {
@@ -224,11 +225,11 @@ option:hover {
 
   .search-items {
     display: block;
-    width: 30%;
+    width: 40%;
     margin: 0;
     margin-top: 0px;
     justify-content: flex-start;
-    height: 23px;
+    height: 18px;
   }
 
   /* SELECT */
@@ -240,60 +241,23 @@ option:hover {
     width: 50%;
   }
 
-   .content-select {
+  .content-select {
     width: 35%;
   }
-  
+
+  .content-select select{
+    width: 100%;
+  }
+
   /* CARD */
-.card-container {
-  display: flex;
-  margin: 0 auto;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  width: 80%;
-}
+  .card-container {
+    justify-content: space-around;
+    width: 80%;
+  }
 
-.card {
-  height: 350px;
-  margin-bottom: 30px;
-  overflow: hidden;
-  width: 30%;
+  .card {
+    height: 370px;
+    width: 30%;
+  }
+  
 }
-.card-header {
-  width: 100%;
-}
-.card-header img {
-  width: 100%;
-}
-.card-body {
-  font-size: 14px;
-  padding: 10px 15px 10px 15px;
-}
-
-.card-body ul {
-  color: var(--darkgray);
-  list-style: none;
-  padding: 0;
-}
-.card-body h2 {
-  color: var(--text);
-}
-
-.card-body ul li span {
-  color: var(--text);
-  font-weight: 700;
-  font-size: 16px;
-}
-
-.card-body ul li span {
-  color: var(--text);
-  font-weight: 700;
-  font-size: 16px;
-}
-
-.card-body ul li {
-  line-height: 25px;
-}
-
-}
-
