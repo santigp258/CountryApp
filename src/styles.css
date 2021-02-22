@@ -1,1 +1,299 @@
-/* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@800&display=swap");
+
+:root {
+  /* HSL */
+  --hue: 205;
+  --saturation: 100%;
+  --lightness: 50%;
+  /* background-color */
+  --verylight: hsl(207, 26%, 17%);
+
+  /* Items */
+  --white: hsl(209, 23%, 22%);
+  --text: hsl(0, 0%, 100%);
+  --darkgray: hsl(0, 0%, 52%);
+
+  --card-border-color: hsla(
+    var(--hue),
+    calc(var(--saturation) * 0),
+    calc(var(--lightness) * 1.8),
+    1
+  );
+  --card-shadow: hsla(0, 0%, 0%, 0.1);
+  --homeitems: 14px;
+
+  --border: 4px;
+}
+
+nav {
+  background-color: var(--white);
+  box-shadow: 0 2px 15px var(--card-shadow);
+}
+
+nav .nav-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+nav .nav-container h1 {
+  font-size: 1em;
+  font-weight: bold;
+  color: var(--text);
+}
+
+nav button {
+  background-color: transparent;
+  border: none;
+  font-size: var(--homeitems);
+  font-weight: 500;
+  color: var(--text);
+  outline: none;
+  cursor: pointer;
+}
+
+nav button i {
+  margin-right: 2px;
+  transform: rotate(-20deg);
+}
+
+/* SEARCH */
+.content {
+  background-color: var(--verylight);
+  height: 100%;
+  font-family: "Nunito Sans", sans-serif;
+}
+
+.search-items {
+  background-color: var(--white);
+  box-shadow: 0 2px 15px var(--card-shadow);
+  color: var(--darkgray);
+  display: flex;
+  margin: 0 auto;
+  margin-top: 20px;
+  justify-content: flex-start;
+  width: 80%;
+  border-radius: var(--border);
+  padding: 17px 20px 17px 20px;
+}
+
+.search-items input {
+  border: 0;
+  outline: none;
+  font-size: var(--homeitems);
+  margin-left: 20px;
+  width: 80%;
+  background: none;
+}
+
+.search-items input:focus {
+  border-bottom: 1px solid #000;
+}
+
+/* SELECT */
+.select {
+  margin: 0 auto;
+  margin-top: 40px;
+  width: 90%;
+}
+.content-select select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+.content-select select::-ms-expand {
+  display: none;
+}
+
+.content-select {
+  margin-bottom: 30px;
+  box-shadow: 0 2px 15px var(--card-shadow);
+  position: relative;
+  width: 60%;
+}
+
+.content-select select {
+  border: 0;
+  border-radius: var(--border);
+  background: var(--white);
+  color: var(--darkgray);
+  cursor: pointer;
+  font-size: var(--homeitems);
+  height: 52px;
+  outline: 0;
+  padding: 7px 10px;
+  position: relative;
+  transition: all 0.25s ease;
+  width: 100%;
+}
+
+.content-select i {
+  color: var(--text);
+  display: block;
+  height: 16px;
+  position: absolute;
+  right: 20px;
+  transition: all 0.25s ease;
+  top: calc(50% - 8px);
+  width: 16px;
+}
+
+.content-select:hover i {
+  transform: rotate(180deg);
+}
+
+option {
+  background-color: var(--white);
+  color: var(--darkgray);
+}
+option:hover {
+  background-color: var(--darkgray);
+  color: var(--white);
+}
+
+/* CARD */
+.card-container {
+  display: flex;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  width: 78%;
+}
+
+.card {
+  background-color: var(--white);
+  border-radius: var(--border);
+  box-shadow: 0 2px 15px var(--card-shadow);
+  height: 350px;
+  margin-bottom: 30px;
+  overflow: hidden;
+  width: 100%;
+}
+.card-header {
+  width: 100%;
+}
+.card-header img {
+  width: 100%;
+}
+.card-body {
+  font-size: 14px;
+  padding: 10px 15px 10px 15px;
+}
+
+.card-body ul {
+  color: var(--darkgray);
+  list-style: none;
+  padding: 0;
+}
+.card-body h2 {
+  color: var(--text);
+}
+
+.card-body ul li span {
+  color: var(--text);
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.card-body ul li span {
+  color: var(--text);
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.card-body ul li {
+  line-height: 25px;
+}
+
+/* DESKTOP */
+
+@media (min-width: 1200px) {
+  .content{
+    height: 100vh;
+  }
+  nav {
+    margin-bottom: 40px;
+  }
+  /* SEARCH */
+  .container {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+  }
+
+  .search-items {
+    display: block;
+    width: 30%;
+    margin: 0;
+    margin-top: 0px;
+    justify-content: flex-start;
+    height: 23px;
+  }
+
+  /* SELECT */
+  .select {
+    display: flex;
+    justify-content: flex-end;
+    margin: 0;
+    padding: 0;
+    width: 50%;
+  }
+
+   .content-select {
+    width: 35%;
+  }
+  
+  /* CARD */
+.card-container {
+  display: flex;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 80%;
+}
+
+.card {
+  height: 350px;
+  margin-bottom: 30px;
+  overflow: hidden;
+  width: 30%;
+}
+.card-header {
+  width: 100%;
+}
+.card-header img {
+  width: 100%;
+}
+.card-body {
+  font-size: 14px;
+  padding: 10px 15px 10px 15px;
+}
+
+.card-body ul {
+  color: var(--darkgray);
+  list-style: none;
+  padding: 0;
+}
+.card-body h2 {
+  color: var(--text);
+}
+
+.card-body ul li span {
+  color: var(--text);
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.card-body ul li span {
+  color: var(--text);
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.card-body ul li {
+  line-height: 25px;
+}
+
+}
+
