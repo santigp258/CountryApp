@@ -126,7 +126,7 @@ nav button i {
   padding: 7px 10px;
   position: relative;
   transition: all 0.25s ease;
-  width: 60%;
+  width: 100%;
 }
 
 .content-select i {
@@ -225,6 +225,41 @@ option:hover {
 
   .search-items {
     display: block;
+    width: 30%;
+    margin: 0;
+    margin-top: 0px;
+    justify-content: flex-start;
+    height: 23px;
+  }
+
+  /* SELECT */
+  .select {
+    display: flex;
+    justify-content: flex-end;
+    margin: 0;
+    padding: 0;
+    width: 50%;
+  }
+
+  .content-select {
+    width: 35%;
+  }
+  /* .content {
+    height: 100vh;
+  }
+  nav {
+    margin-bottom: 40px;
+  }
+  SEARCH 
+  .container {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+  }
+
+  .search-items {
+    display: block;
     width: 40%;
     margin: 0;
     margin-top: 0px;
@@ -245,10 +280,10 @@ option:hover {
     width: 35%;
   }
 
-  .content-select select{
+  .content-select select {
     width: 100%;
   }
-
+  */
   /* CARD */
   .card-container {
     justify-content: space-around;
@@ -259,5 +294,4 @@ option:hover {
     height: 370px;
     width: 30%;
   }
-  
 }
