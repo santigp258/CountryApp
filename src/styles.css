@@ -43,10 +43,12 @@ nav .nav-container {
 }
 
 nav .nav-container h1 {
+  color: var(--text);
+  cursor: pointer;
   font-size: 1em;
   font-weight: bold;
-  color: var(--text);
 }
+
 
 nav button {
   background-color: transparent;
@@ -174,6 +176,7 @@ option:hover {
   width: 100%;
 }
 .card-header img {
+  cursor: pointer;
   min-height: 160px;
   max-height: 160px;
   width: 100%;

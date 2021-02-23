@@ -1,5 +1,5 @@
 <div class="card-header">
-  <img [src]="country.flag" [alt]="country.name" />
+  <img [src]="country.flag" [alt]="country.name" [routerLink]="['/details/', country.alpha2Code]" />
 </div>
 <!-- END CARD-HEADER -->
 <div class="card-body">
