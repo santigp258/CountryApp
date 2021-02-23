@@ -44,6 +44,10 @@ nav .nav-container {
   padding: 20px;
 }
 
+nav .nav-container a {
+  text-decoration: none;
+}
+
 nav .nav-container h1 {
   color: var(--text);
   cursor: pointer;
