@@ -14,7 +14,7 @@
     <div class="content-select">
       <select formControlName="select" #select (change)="search()">
         <option value="">Filter by Region</option>
-        <option *ngFor="let region of regions" [value]="region | lowercase" >
+        <option *ngFor="let region of regions" [value]="region" >
           {{ region }}
         </option>
       </select>
@@ -23,5 +23,3 @@
   </div>
   <!-- END SELECT -->
 </form>
-
-{{ myForm.value | json }}

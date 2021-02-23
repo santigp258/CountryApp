@@ -4,9 +4,9 @@
 <!-- END CONTAINER -->
 
 <div class="card-container">
-  <div class="card">
-    <app-card-home></app-card-home>
-  </div>
+
+    <app-card-home [country]="country" class="card" *ngFor="let country of countries"></app-card-home>
+
   <!-- END CARD -->
 </div>
 <!-- END CARD-CONTAINER -->

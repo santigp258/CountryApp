@@ -1,13 +1,13 @@
 <div class="card-header">
-  <img src="https://restcountries.eu/data/mex.svg" alt="" />
+  <img [src]="country.flag" alt="" />
 </div>
 <!-- END CARD-HEADER -->
 <div class="card-body">
-  <h2>Mexico</h2>
+  <h2>{{ country.name }}</h2>
   <ul>
-    <li><span>Population:</span> 122,273,473</li>
-    <li><span>Region:</span> America</li>
-    <li><span>Capital:</span> Mexico City</li>
+    <li><span>Population:</span> {{ country.population }}</li>
+    <li><span>Region:</span> {{ country.population }}</li>
+    <li><span>Capital:</span> {{ country.capital }}</li>
   </ul>
 </div>
 <!-- END CARD-BODY -->

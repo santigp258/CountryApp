@@ -244,28 +244,6 @@ option:hover {
   .content-select {
     width: 35%;
   }
-  /* .content {
-    height: 100vh;
-  }
-  nav {
-    margin-bottom: 40px;
-  }
-  SEARCH 
-  .container {
-    width: 80%;
-    display: flex;
-    justify-content: space-between;
-    margin: 0 auto;
-  }
-
-  .search-items {
-    display: block;
-    width: 40%;
-    margin: 0;
-    margin-top: 0px;
-    justify-content: flex-start;
-    height: 18px;
-  }
 
   /* SELECT */
   .select {
@@ -283,15 +261,58 @@ option:hover {
   .content-select select {
     width: 100%;
   }
-  */
+  
   /* CARD */
-  .card-container {
-    justify-content: space-around;
-    width: 80%;
-  }
+.card-container {
+  display: flex;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 80%;
+}
 
-  .card {
-    height: 370px;
-    width: 30%;
-  }
+.card {
+  min-height: 360px;
+  margin-bottom: 30px;
+  overflow: hidden;
+  max-width: 250px;
+}
+.card-header {
+  width: 100%;
+  min-height: 100px;
+}
+.card-header img {
+  min-height: 160px;
+  max-height: 160px;
+  width: 100%;
+}
+.card-body {
+  font-size: 14px;
+  padding: 10px 15px 10px 15px;
+}
+
+.card-body ul {
+  color: var(--darkgray);
+  list-style: none;
+  padding: 0;
+}
+.card-body h2 {
+  color: var(--text);
+}
+
+.card-body ul li span {
+  color: var(--text);
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.card-body ul li span {
+  color: var(--text);
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.card-body ul li {
+  line-height: 25px;
+}
 }
