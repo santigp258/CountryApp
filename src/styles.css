@@ -87,6 +87,7 @@ nav button i {
 
 .search-items input {
   border: 0;
+  color: var(--text);
   outline: none;
   font-size: var(--homeitems);
   margin-left: 20px;
@@ -95,7 +96,9 @@ nav button i {
 }
 
 .search-items input:focus {
-  border-bottom: 1px solid #000;
+  border-bottom: 1px solid var(--text);
+  color: var(--text);
+  text-decoration: 1 ease;
 }
 
 /* SELECT */
