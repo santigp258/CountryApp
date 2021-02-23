@@ -11,7 +11,7 @@ export class CountryService {
 
   constructor(private http: HttpClient) {}
 
-  getContryByRegion(region: string): Observable<Country[]> {
+  getCountryByRegion(region: string): Observable<Country[]> {
     return this.http.get<Country[]>(`${this.baseUrl}/region/${region}`);
   }
 
@@ -21,5 +21,9 @@ export class CountryService {
       .pipe(
         catchError(resp => of([]))
       );
+  }
+
+  getCountryByAlphaCode(code:string): Observable<Country>{
+    return this.http.get<Country>(`${this.baseUrl}/alpha/${code}`);
   }
 }

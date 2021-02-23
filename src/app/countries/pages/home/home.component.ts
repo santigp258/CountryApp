@@ -19,7 +19,7 @@ export class HomeComponent implements OnInit {
 
   onSearch({ search: name, select: region }: any) {
     if (name === '') {
-      this.countryService.getContryByRegion(region).subscribe(
+      this.countryService.getCountryByRegion(region).subscribe(
         country => this.countries = country
       )
     } else {

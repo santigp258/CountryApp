@@ -278,14 +278,14 @@ option:hover {
   margin-bottom: 20px;
 }
 
-.details ul li span{
+.details ul li span:nth-child(1){
   color: var(--text);
 }
 
 .borders{
   display: flex;
-  justify-content: space-between;
   margin-bottom: 20px;
+  flex-wrap: wrap;
 }
 
 .borders a{
@@ -294,10 +294,11 @@ option:hover {
   border-radius: 2px;
   color: var(--text);
   margin-right: 5px;
+  margin-bottom: 5px;
   text-decoration: none;
   text-align: center;
   padding: 5px;
-  width: 30%;
+  width: 20%;
 }
 /* DESKTOP */
 
