@@ -10,7 +10,7 @@ import { Country } from '../../interfaces/country.interface';
 export class HomeComponent implements OnInit {
   countries: Country[] = [];
   defaultValue = { search: 'col', select: 'Americas' };
-
+  error: boolean = false;
   constructor(private countryService: CountryService) {}
 
   ngOnInit(): void {
@@ -22,13 +22,18 @@ export class HomeComponent implements OnInit {
     this.countryService.getContryByName(name).subscribe((countries) => {
       //remove old values
       this.countries = [];
-
-      //recipe country 
-      countries.forEach((country) => {
-        if (country.region === region) {
-          this.countries.push(country);
-        }
-      });
+      if (countries.length !== 0) { //catch error
+        this.error = true;
+          //recipe country
+        countries.forEach((country) => {
+          if (country.region === region) {
+            this.countries.push(country);
+            this.error = false;
+          }
+        });
+      } else {
+        this.error = true;
+      }
     });
   }
 }

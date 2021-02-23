@@ -165,7 +165,7 @@ option:hover {
   background-color: var(--white);
   border-radius: var(--border);
   box-shadow: 0 2px 15px var(--card-shadow);
-  height: 350px;
+  height: 375px;
   margin-bottom: 30px;
   overflow: hidden;
   width: 100%;
@@ -174,6 +174,8 @@ option:hover {
   width: 100%;
 }
 .card-header img {
+  min-height: 160px;
+  max-height: 160px;
   width: 100%;
 }
 .card-body {
@@ -204,6 +206,18 @@ option:hover {
 
 .card-body ul li {
   line-height: 25px;
+}
+
+/* ERROR */
+.error{
+  margin: 0 auto;
+  width: 80%;
+  text-align: center;
+  color: var(--text);
+}
+
+.error img{
+  width: 100%;
 }
 
 /* DESKTOP */
@@ -274,45 +288,26 @@ option:hover {
 .card {
   min-height: 360px;
   margin-bottom: 30px;
-  overflow: hidden;
   max-width: 250px;
+  overflow: hidden;
 }
 .card-header {
-  width: 100%;
   min-height: 100px;
-}
-.card-header img {
-  min-height: 160px;
-  max-height: 160px;
   width: 100%;
 }
+
 .card-body {
   font-size: 14px;
   padding: 10px 15px 10px 15px;
 }
 
-.card-body ul {
-  color: var(--darkgray);
-  list-style: none;
-  padding: 0;
-}
-.card-body h2 {
-  color: var(--text);
-}
-
-.card-body ul li span {
-  color: var(--text);
-  font-weight: 700;
-  font-size: 16px;
-}
-
-.card-body ul li span {
-  color: var(--text);
-  font-weight: 700;
-  font-size: 16px;
-}
-
 .card-body ul li {
   line-height: 25px;
 }
+
+/* ERROR */
+.error img{
+  width: 50%;
+}
+
 }

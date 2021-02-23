@@ -1,12 +1,16 @@
-
-    <app-search (onSearch)="onSearch($event)" ></app-search>
-  <!-- END SEARCH -->
+<app-search (onSearch)="onSearch($event)"></app-search>
+<!-- END SEARCH -->
 <!-- END CONTAINER -->
 
 <div class="card-container">
-
-    <app-card-home [country]="country" class="card" *ngFor="let country of countries"></app-card-home>
-
+  <app-card-home
+    [country]="country"
+    class="card"
+    *ngFor="let country of countries"
+  ></app-card-home>
   <!-- END CARD -->
+  <app-error class="error" *ngIf="error"></app-error>
 </div>
 <!-- END CARD-CONTAINER -->
+
+

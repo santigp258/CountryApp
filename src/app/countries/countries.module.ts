@@ -8,6 +8,7 @@ import { MenuComponent } from './pages/menu/menu.component';
 import { SearchComponent } from './components/search/search.component';
 import { CardHomeComponent } from './components/card-home/card-home.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { ErrorComponent } from './components/error/error.component';
 
 
 @NgModule({
@@ -17,6 +18,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     MenuComponent,
     SearchComponent,
     CardHomeComponent,
+    ErrorComponent,
   ],
   imports: [CommonModule, CountriesRoutingModule, ReactiveFormsModule],
 })
