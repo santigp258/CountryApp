@@ -5,32 +5,30 @@ import { Country } from '../../interfaces/country.interface';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styles: [
-  ]
+  styles: [],
 })
 export class HomeComponent implements OnInit {
+  countries: Country[] = [];
+  defaultValue = { search: 'col', select: 'Americas' };
 
-  countries:Country[] = [];
+  constructor(private countryService: CountryService) {}
 
-  constructor(private countryService: CountryService) {
-  }
-  
   ngOnInit(): void {
-    this.countryService.getContryByName('col').subscribe(res =>{
-      this.countries = res
-    })
+    this.onSearch(this.defaultValue);
   }
 
-  onSearch(eventTerm:any){
-    const {search : name, select : region} =  eventTerm;
-    this.countryService.getContryByName(name).subscribe( res =>{
+  onSearch(eventTerm: any) {
+    const { search: name, select: region } = eventTerm;
+    this.countryService.getContryByName(name).subscribe((countries) => {
+      //remove old values
       this.countries = [];
-      res.forEach(country =>{
-        if(country.region === region){
+
+      //recipe country 
+      countries.forEach((country) => {
+        if (country.region === region) {
           this.countries.push(country);
         }
-      })
-    })
+      });
+    });
   }
- 
 }

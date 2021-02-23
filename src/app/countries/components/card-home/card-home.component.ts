@@ -8,12 +8,7 @@ import { Country } from '../../interfaces/country.interface';
   ]
 })
 export class CardHomeComponent implements OnInit {
-  @Input('country') country: Country = {
-    name: 'Col',
-    population: 122222,
-    region: 'clcl',
-    capital: 'jdjdjd'
-  };
+  @Input('country') country!: Country;
   constructor() { }
 
   ngOnInit(): void {
