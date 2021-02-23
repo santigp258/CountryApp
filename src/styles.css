@@ -250,7 +250,7 @@ option:hover {
   width: 25%;
 }
 
-.button a{
+.link-detail {
   color: var(--text);
   text-decoration: none;
   margin-left: 2px;
@@ -330,7 +330,7 @@ option:hover {
     height: 23px;
   }
 
-  /* SELECT */
+  /****** SELECT  *****/
   .select {
     display: flex;
     justify-content: flex-end;
@@ -343,24 +343,12 @@ option:hover {
     width: 35%;
   }
 
-  /* SELECT */
-  .select {
-    display: flex;
-    justify-content: flex-end;
-    margin: 0;
-    padding: 0;
-    width: 50%;
-  }
-
-  .content-select {
-    width: 35%;
-  }
 
   .content-select select {
     width: 100%;
   }
 
-  /* CARD */
+  /* CARD */  
   .card-container {
     display: flex;
     margin: 0 auto;
@@ -393,5 +381,49 @@ option:hover {
   /* ERROR */
   .error img {
     width: 50%;
+  }
+
+  /***** DETAILS *****/
+  .container-details{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .button{
+    width: 100px;
+  }
+
+  .container-image{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+  .image{
+    width: 80%;
+  }
+
+  .image img {
+    width: 80%;
+    height: 400px;    
+  }
+
+  .details{
+    width: 50%;
+  }
+  .details h1{
+    margin-bottom: 40px;
+  }
+  .details ul{
+    display: flex;
+    margin-bottom: 80px;
+    font-size: 14px;
+    flex-wrap: wrap;
+  }
+
+  .details ul li{
+    flex-basis: 50%;
+  }
+  .details ul li:nth-child(5){
+    margin-bottom: 0px;
   }
 }

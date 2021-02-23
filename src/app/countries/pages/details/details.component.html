@@ -1,14 +1,16 @@
 <div class="container-details" *ngIf="country">
+  <a routerLink="''" class="link-detail">
   <div class="button">
-    <a routerLink="''"><i class="fas fa-arrow-left"></i> Back</a>
+    <i class="fas fa-arrow-left"></i> Back
   </div>
-
+</a>
+ <div class="container-image">
   <div class="image">
     <img [src]="country.flag" [alt]="country.name" />
   </div>
 
   <div class="details">
-    <h2>{{country.name}}</h2>
+    <h1>{{country.name}}</h1>
     <ul>
       <li><span>Native Name:</span> {{ country.nativeName }}</li>
       <li><span> Population:</span> {{ country.population| number: "1.0-0" }}</li>
@@ -28,4 +30,5 @@
       <a [routerLink]="['/details/', border]" *ngFor="let border of country.borders" >{{ border|titlecase}}</a>
     </div>
   </div>
+ </div>
 </div>
