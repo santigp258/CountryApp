@@ -27,9 +27,6 @@ export class SearchComponent implements OnInit {
   ngOnInit(): void {}
 
   search() {
-    if(this.myForm.get('search')?.value == "" || this.myForm.invalid){
-      return;
-    }
-    this.onSearch.emit(this.myForm.value);
+    (this.myForm.get('select')?.value == '') ? ''  : this.onSearch.emit(this.myForm.value);
   }
 }

@@ -209,14 +209,14 @@ option:hover {
 }
 
 /* ERROR */
-.error{
+.error {
   margin: 0 auto;
   width: 80%;
   text-align: center;
   color: var(--text);
 }
 
-.error img{
+.error img {
   width: 100%;
 }
 
@@ -275,39 +275,39 @@ option:hover {
   .content-select select {
     width: 100%;
   }
-  
+
   /* CARD */
-.card-container {
-  display: flex;
-  margin: 0 auto;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  width: 80%;
-}
+  .card-container {
+    display: flex;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 80%;
+  }
 
-.card {
-  min-height: 360px;
-  margin-bottom: 30px;
-  max-width: 250px;
-  overflow: hidden;
-}
-.card-header {
-  min-height: 100px;
-  width: 100%;
-}
+  .card {
+    min-height: 360px;
+    margin-bottom: 30px;
+    margin-right: 16px;
+    overflow: hidden;
+    width: 20%;
+  }
+  .card-header {
+    min-height: 100px;
+    width: 100%;
+  }
 
-.card-body {
-  font-size: 14px;
-  padding: 10px 15px 10px 15px;
-}
+  .card-body {
+    font-size: 14px;
+    padding: 10px 15px 10px 15px;
+  }
 
-.card-body ul li {
-  line-height: 25px;
-}
+  .card-body ul li {
+    line-height: 25px;
+  }
 
-/* ERROR */
-.error img{
-  width: 50%;
-}
-
+  /* ERROR */
+  .error img {
+    width: 50%;
+  }
 }

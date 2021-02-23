@@ -17,23 +17,29 @@ export class HomeComponent implements OnInit {
     this.onSearch(this.defaultValue);
   }
 
-  onSearch(eventTerm: any) {
-    const { search: name, select: region } = eventTerm;
-    this.countryService.getContryByName(name).subscribe((countries) => {
-      //remove old values
-      this.countries = [];
-      if (countries.length !== 0) { //catch error
-        this.error = true;
+  onSearch({ search: name, select: region }: any) {
+    if (name === '') {
+      this.countryService.getContryByRegion(region).subscribe(
+        country => this.countries = country
+      )
+    } else {
+      this.countryService.getContryByName(name).subscribe((countries) => {
+        //remove old values
+        this.countries = [];
+        if (countries.length !== 0) {
+          //catch error
+          this.error = true;
           //recipe country
-        countries.forEach((country) => {
-          if (country.region === region) {
-            this.countries.push(country);
-            this.error = false;
-          }
-        });
-      } else {
-        this.error = true;
-      }
-    });
+          countries.forEach((country) => {
+            if (country.region === region) {
+              this.countries.push(country);
+              this.error = false;
+            }
+          });
+        } else {
+          this.error = true;
+        }
+      });
+    }
   }
 }
