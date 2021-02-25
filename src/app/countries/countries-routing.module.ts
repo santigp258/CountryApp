@@ -3,11 +3,11 @@ import { RouterModule, Routes } from '@angular/router';
 import { MenuComponent } from './pages/menu/menu.component';
 import { HomeComponent } from './pages/home/home.component';
 import { DetailsComponent } from './pages/details/details.component';
+import { AppComponent } from '../app.component';
 
 const routes: Routes = [
   {
     path: '',
-    component: MenuComponent,
     children: [
       {
         path: '',

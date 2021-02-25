@@ -1,41 +1,24 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@800&display=swap");
 
-:root {
-  /* HSL */
-  --hue: 205;
-  --saturation: 100%;
-  --lightness: 50%;
-  /* background-color */
-  --verylight: hsl(207, 26%, 17%);
 
-  /* Items */
-  --white: hsl(209, 23%, 22%);
-  --text: hsl(0, 0%, 100%);
-  --darkgray: hsl(0, 0%, 52%);
 
-  --card-border-color: hsla(
-    var(--hue),
-    calc(var(--saturation) * 0),
-    calc(var(--lightness) * 1.8),
-    1
-  );
-  --card-shadow: hsla(0, 0%, 0%, 0.1);
-  --homeitems: 14px;
-
-  --border: 4px;
-}
-
-body {
-  background-color: var(--verylight);
+body, html {
   height: 100%;
   font-family: "Nunito Sans", sans-serif;
 }
 
 /************* HOME ***************/
+.content{
+  background-color: var(--verylight);
+}
 
+.content-height{
+  height: 100vh;
+}
 /* NAV */
 nav {
   background-color: var(--white);
+  box-shadow: 0 2px 15px var(--card-shadow);
 }
 
 nav .nav-container {
@@ -75,7 +58,7 @@ nav button i {
 .search-items {
   background-color: var(--white);
   box-shadow: 0 2px 15px var(--card-shadow);
-  color: var(--darkgray);
+  color: var(--text);
   display: flex;
   margin: 0 auto;
   margin-top: 20px;
@@ -129,7 +112,7 @@ nav button i {
   border: 0;
   border-radius: var(--border);
   background: var(--white);
-  color: var(--darkgray);
+  color: var(--text);
   cursor: pointer;
   font-size: var(--homeitems);
   height: 52px;
@@ -157,7 +140,7 @@ nav button i {
 
 option {
   background-color: var(--white);
-  color: var(--darkgray);
+  color: var(--text);
 }
 option:hover {
   background-color: var(--darkgray);
