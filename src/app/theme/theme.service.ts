@@ -10,6 +10,9 @@ export class ThemeService {
     @Inject(THEMES) public themes: Theme[],
     @Inject(ACTIVE_THEME) public theme: string
   ) {
+     if(localStorage.getItem('theme')){
+       this.theme = localStorage.getItem('theme') || 'light';
+     }
   }
 
   getActiveTheme() {
@@ -21,6 +24,7 @@ export class ThemeService {
   }
 
   setTheme(name: string) {
+    localStorage.setItem('theme', name);
     this.theme = name;
     this.themeChange.emit( this.getActiveTheme());
   }

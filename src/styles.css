@@ -3,18 +3,16 @@
 
 
 body, html {
-  height: 100%;
   font-family: "Nunito Sans", sans-serif;
 }
 
 /************* HOME ***************/
 .content{
   background-color: var(--verylight);
+  min-height: 820px;
+  height: 100%;
 }
 
-.content-height{
-  height: 100vh;
-}
 /* NAV */
 nav {
   background-color: var(--white);
