@@ -9,7 +9,7 @@ body, html {
 /************* HOME ***************/
 .content{
   background-color: var(--verylight);
-  min-height: 820px;
+  min-height: 100vh;
   height: 100%;
 }
 
@@ -291,8 +291,8 @@ option:hover {
 /* DESKTOP */
 
 @media (min-width: 1200px) {
-  .content {
-    height: 100vh;
+  .content{
+    min-height: 100vh;
   }
   nav {
     margin-bottom: 40px;
