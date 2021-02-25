@@ -7,15 +7,18 @@ import { ThemeService } from './theme/theme.service';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  title = 'CountryApp';
+  theme = 'dark';
 
   constructor(private themeService: ThemeService) {}
   toggle() {
     const active = this.themeService.getActiveTheme();
     if (active.name === 'light') {
       this.themeService.setTheme('dark');
+      this.theme = 'light';
+      console.log('hi!');
     } else {
       this.themeService.setTheme('light');
+      this.theme = 'dark';
     }
   }
 }

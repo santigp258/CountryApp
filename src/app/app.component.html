@@ -1,11 +1,13 @@
 <div class="content" app-theme>
-    <nav class="nav">
-      <div class="nav-container">
-        <a routerLink="''"><h1>Where in the world?</h1></a>
-        <button type="button" (click)="toggle()"><i class="far fa-moon"></i> Dark Mode</button>
-      </div>
-    </nav>
-    <!-- END NAV -->
-    <router-outlet></router-outlet>
-  </div>
-  <!-- END CONTENT -->
+  <nav class="nav">
+    <div class="nav-container">
+      <a routerLink="''"><h1>Where in the world?</h1></a>
+      <button type="button" (click)="toggle()">
+        <i class="far fa-moon"></i> {{ theme | titlecase }} Mode
+      </button>
+    </div>
+  </nav>
+  <!-- END NAV -->
+  <router-outlet></router-outlet>
+</div>
+<!-- END CONTENT -->
